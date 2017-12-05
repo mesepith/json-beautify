@@ -1,0 +1,29 @@
+<html>
+	<body>
+		<script>
+			
+			function myFunction(){
+				
+				var json_value = document.getElementById("json_value").value;
+				
+				var json_parse = JSON.parse(json_value);
+				
+				var json_beautify = JSON.stringify(JSON.parse(json_value), null, 4);
+				
+				console.log(json_beautify);
+				
+				document.body.appendChild(document.createElement('pre')).innerHTML = json_beautify;
+				
+			}
+			
+		</script>
+		<div id="overview">
+		
+			Type or paste your json to view it in beaiful way
+			
+		</div>
+		<textarea rows="4" cols="50" id="json_value"  oninput="myFunction()"></textarea>
+		
+		
+	</body>
+</html>
